@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val navView: BottomNavigationView = binding.navView
+        //val navView: BottomNavigationView = binding.navView
 
         val navController = findNavController(R.id.nav_host_fragment_activity_main)
         navController.navigate(R.id.navigation_splash)
@@ -38,16 +38,16 @@ class MainActivity : AppCompatActivity() {
             )*/
 
         )
-        val noBottomNavigationIds = listOf(R.id.navigation_splash, R.id.navigation_dashboard)
+        /*val noBottomNavigationIds = listOf(R.id.navigation_splash, R.id.navigation_dashboard)
         navController.addOnDestinationChangedListener { _, destination, _ ->
             if (noBottomNavigationIds.contains(destination.id)) {
                 supportActionBar?.hide()
             } else {
                 supportActionBar?.show()
             }
-        }
+        }*/
         setupActionBarWithNavController(navController, appBarConfiguration)
 
-        navView.setupWithNavController(navController)
+        //navView.setupWithNavController(navController)
     }
 }
