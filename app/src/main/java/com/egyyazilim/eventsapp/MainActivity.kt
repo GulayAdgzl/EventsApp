@@ -38,14 +38,14 @@ class MainActivity : AppCompatActivity() {
             )*/
 
         )
-        /*val noBottomNavigationIds = listOf(R.id.navigation_splash, R.id.navigation_dashboard)
+        val noBottomNavigationIds = listOf(R.id.navigation_splash, R.id.navigation_dashboard)
         navController.addOnDestinationChangedListener { _, destination, _ ->
             if (noBottomNavigationIds.contains(destination.id)) {
                 supportActionBar?.hide()
             } else {
                 supportActionBar?.show()
             }
-        }*/
+        }
         setupActionBarWithNavController(navController, appBarConfiguration)
 
         //navView.setupWithNavController(navController)
