@@ -20,6 +20,12 @@
             app:popUpToInclusive="true"
             android:id="@+id/action_navigation_splash_to_navigation_dashboard"
             app:destination="@id/navigation_dashboard" />
+        <action
+            android:id="@+id/action_navigation_splash_to_welcomeFragment"
+            app:destination="@id/welcomeFragment" />
+        <action
+            android:id="@+id/action_navigation_splash_to_onBoardingFragment"
+            app:destination="@id/onBoardingFragment" />
 
 
     </fragment>
@@ -49,6 +55,20 @@
         <action
             android:id="@+id/action_navigation_dashboard_to_navigation_splash"
             app:destination="@id/navigation_splash" />
+    </fragment>
+    <fragment
+        android:id="@+id/welcomeFragment"
+        android:name="com.egyyazilim.eventsapp.ui.splash.WelcomeFragment"
+        android:label="fragment_welcome"
+        tools:layout="@layout/fragment_welcome" />
+    <fragment
+        android:id="@+id/onBoardingFragment"
+        android:name="com.egyyazilim.eventsapp.ui.splash.OnBoardingFragment"
+        android:label="fragment_on_boarding"
+        tools:layout="@layout/fragment_on_boarding" >
+        <action
+            android:id="@+id/action_onBoardingFragment_to_welcomeFragment"
+            app:destination="@id/welcomeFragment" />
     </fragment>
 
 </navigation>
