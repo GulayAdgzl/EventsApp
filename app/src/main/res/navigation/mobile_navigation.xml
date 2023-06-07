@@ -9,6 +9,17 @@
         android:name="com.egyyazilim.eventsapp.ui.splash.SplashFragment"
         android:label="Splash"
         tools:layout="@layout/fragment_splash">
+        <action
+            android:id="@+id/action_signInFragment_to_usersFragment"
+            app:destination="@id/navigation_home"
+            app:popUpTo="@id/navigation_splash"
+            app:popUpToInclusive="true"
+            />
+        <action
+            app:popUpTo="@id/navigation_splash"
+            app:popUpToInclusive="true"
+            android:id="@+id/action_navigation_splash_to_navigation_dashboard"
+            app:destination="@id/navigation_dashboard" />
 
 
     </fragment>
@@ -18,12 +29,26 @@
         android:id="@+id/navigation_home"
         android:name="com.egyyazilim.eventsapp.ui.home.HomeFragment"
         android:label="@string/title_home"
-        tools:layout="@layout/fragment_home"/>
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_dashboard"
+            app:destination="@id/navigation_dashboard" />
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_splash"
+            app:destination="@id/navigation_splash" />
+    </fragment>
 
     <fragment
         android:id="@+id/navigation_dashboard"
         android:name="com.egyyazilim.eventsapp.ui.dashboard.DashboardFragment"
         android:label="@string/title_dashboard"
-        tools:layout="@layout/fragment_dashboard" />
+        tools:layout="@layout/fragment_dashboard" >
+        <action
+            android:id="@+id/action_navigation_dashboard_to_navigation_home"
+            app:destination="@id/navigation_home" />
+        <action
+            android:id="@+id/action_navigation_dashboard_to_navigation_splash"
+            app:destination="@id/navigation_splash" />
+    </fragment>
 
 </navigation>
