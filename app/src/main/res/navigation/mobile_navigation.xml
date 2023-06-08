@@ -6,7 +6,7 @@
     app:startDestination="@+id/navigation_splash">
     <fragment
         android:id="@+id/navigation_splash"
-        android:name="com.egyyazilim.eventsapp.ui.splash.SplashFragment"
+        android:name="com.egyyazilim.eventsapp.ui.intro.SplashFragment"
         android:label="Splash"
         tools:layout="@layout/fragment_splash">
         <action
@@ -58,12 +58,12 @@
     </fragment>
     <fragment
         android:id="@+id/welcomeFragment"
-        android:name="com.egyyazilim.eventsapp.ui.splash.WelcomeFragment"
+        android:name="com.egyyazilim.eventsapp.ui.intro.WelcomeFragment"
         android:label="fragment_welcome"
         tools:layout="@layout/fragment_welcome" />
     <fragment
         android:id="@+id/onBoardingFragment"
-        android:name="com.egyyazilim.eventsapp.ui.splash.OnBoardingFragment"
+        android:name="com.egyyazilim.eventsapp.ui.intro.OnBoardingFragment"
         android:label="fragment_on_boarding"
         tools:layout="@layout/fragment_on_boarding" >
         <action

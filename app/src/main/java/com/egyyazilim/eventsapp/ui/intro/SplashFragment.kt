@@ -1,4 +1,4 @@
-package com.egyyazilim.eventsapp.ui.splash
+package com.egyyazilim.eventsapp.ui.intro
 
 import android.os.Bundle
 import android.os.Handler
@@ -10,7 +10,6 @@ import android.view.WindowManager
 import androidx.datastore.core.DataStore
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.findNavController
-import com.egyyazilim.eventsapp.R
 import com.egyyazilim.eventsapp.databinding.FragmentSplashBinding
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.Runnable
@@ -27,7 +26,7 @@ class SplashFragment : Fragment() {
     private val runnable=Runnable{
         lifecycleScope.launch {
             prefs.data.collectLatest {
-                if(it[prefencesKey<Boolean>("onBoard")]==true)
+                if (it[preferencesKey<Boolean>("onBoard")] == true)
                     requireView().findNavController()
                         .navigate(SplashFragmentDirections.actionNavigationSplashToWelcomeFragment())
                 else
